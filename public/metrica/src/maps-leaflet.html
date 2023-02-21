@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    @@include("./partials/title-meta.html", {"title": "Metrica"})
+
+    <link href="assets/libs/leaflet/leaflet.css" rel="stylesheet">
+
+    @@include('./partials/head-css.html')
+</head>
+
+<body id="body">
+    <!-- leftbar-tab-menu -->
+    @@include('./partials/left-sidebar-tab.html')
+    <!-- end leftbar-tab-menu-->
+
+    <!-- Top Bar Start -->
+    @@include('./partials/topbar.html')
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+
+        <!-- Page Content-->
+        <div class="page-content-tab">
+
+            <div class="container-fluid">
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="float-end">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Metrica</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Maps</a></li>
+                                    <li class="breadcrumb-item active">Leaflet</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Leaflet</h4>
+                        </div>
+                        <!--end page-title-box-->
+                    </div>
+                    <!--end col-->
+                </div>
+                <!-- end page title end breadcrumb -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Leaflet Quick Start Guide</h4>
+                                <p class="text-muted mb-0">Example of Leaflet map.</p>  
+                            </div><!--end card-header-->
+                            <div class="card-body">   
+                                <div id="Leaf_default" class="" style="height: 400px"></div>        
+                            </div><!--end card-body-->
+                        </div> <!--end card-->
+                    </div> <!-- end col -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Bounds Extend</h4>
+                                <p class="text-muted mb-0">Example of Leaflet map.</p>  
+                            </div><!--end card-header-->
+                            <div class="card-body">              
+                                <div id="Bounds_Extend" class="" style="height: 400px"></div>        
+                            </div><!--end card-body-->
+                        </div> <!--end card-->
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Vector Bounds</h4>
+                                <p class="text-muted mb-0">Example of Leaflet map.</p>  
+                            </div><!--end card-header-->
+                            <div class="card-body">              
+                                <div id="Vector_bounds" class="" style="height: 400px"></div>        
+                            </div><!--end card-body-->
+                        </div> <!--end card-->
+                    </div> <!-- end col -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Moov Canvas</h4>
+                                <p class="text-muted mb-0">Example of Leaflet map.</p>  
+                            </div><!--end card-header-->
+                            <div class="card-body">              
+                                <div id="Moov_Canvas" class="" style="height: 400px"></div>        
+                            </div><!--end card-body-->
+                        </div> <!--end card-->
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Array Map</h4>
+                                <p class="text-muted mb-0">Example of Leaflet map.</p>  
+                            </div><!--end card-header-->
+                            <div class="card-body">       
+                                <div id="Array_Map" class="" style="height: 400px"></div>        
+                            </div><!--end card-body-->
+                        </div> <!--end card-->
+                    </div> <!-- end col -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Simple Vector Map</h4>
+                                <p class="text-muted mb-0">Example of Leaflet map.</p>  
+                            </div><!--end card-header-->
+                            <div class="card-body">            
+                                <div id="V_Simple" class="" style="height: 400px"></div>        
+                            </div><!--end card-body-->
+                        </div> <!--end card-->
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+
+            </div><!-- container -->
+
+            <!--Start Rightbar-->
+            @@include('./partials/right-sidebar.html')
+            <!--end Rightbar-->
+            
+           <!--Start Footer-->
+           @@include('./partials/footer.html')                
+           <!--end footer-->
+        </div>
+        <!-- end page content -->
+    </div>
+    <!-- end page-wrapper -->
+
+
+
+
+    <!-- Javascript  -->
+    <!-- vendor js -->
+    @@include('./partials/vendorjs.html')
+    <script src="assets/libs/leaflet/leaflet.js"></script> 
+    <script src="assets/js/pages/leaflet-map.init.js"></script> 
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

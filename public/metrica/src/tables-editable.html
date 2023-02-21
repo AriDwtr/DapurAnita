@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    @@include("./partials/title-meta.html", {"title": "Metrica"})
+
+    <link href="assets/libs/tabulator-tables/css/tabulator_bootstrap5.min.css" rel="stylesheet" type="text/css" />
+
+    @@include('./partials/head-css.html')
+</head>
+
+
+<body id="body">
+    <!-- leftbar-tab-menu -->
+    @@include('./partials/left-sidebar-tab.html')
+    <!-- end leftbar-tab-menu-->
+
+    <!-- Top Bar Start -->
+    @@include('./partials/topbar.html')
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+
+        <!-- Page Content-->
+        <div class="page-content-tab">
+
+            <div class="container-fluid">
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="float-end">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Metrica</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                                    <li class="breadcrumb-item active">Editable</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Editable</h4>
+                        </div>
+                        <!--end page-title-box-->
+                    </div>
+                    <!--end col-->
+                </div>
+                <!-- end page title end breadcrumb -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Editable Data </h4>
+                                <p class="text-muted mb-0">Using the editable setting on each column, you can make a user editable table.
+                                </p>
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <div class="mb-2">
+                                        <button class="btn btn-outline-primary btn-sm mb-1 mb-xl-0" id="reactivity-add">Add New Row</button>
+                                        <button class="btn btn-outline-primary btn-sm mb-1 mb-xl-0" id="reactivity-delete">Remove Row</button>
+                                        <button class="btn btn-outline-primary btn-sm mb-1 mb-xl-0" id="reactivity-update">Update First Row Name</button>
+                                    </div>
+                                    <div id="editable"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+
+            </div><!-- container -->
+
+            <!--Start Rightbar-->
+            @@include('./partials/right-sidebar.html')
+            <!--end Rightbar-->
+            
+           <!--Start Footer-->
+           @@include('./partials/footer.html')                
+           <!--end footer-->
+        </div>
+        <!-- end page content -->
+    </div>
+    <!-- end page-wrapper -->
+
+
+
+    <!-- Javascript  -->
+    <!-- vendor js -->
+    @@include('./partials/vendorjs.html')
+    <script src="assets/libs/tabulator-tables/js/tabulator.min.js"></script>
+    <script src="assets/js/pages/editable.init.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

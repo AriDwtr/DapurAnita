@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        @@include("./partials/title-meta.html", {"title": "Metrica"})
+
+        @@include('./partials/head-css.html')
+    </head>
+
+    <body id="body">
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/left-sidebar-tab.html')
+        <!-- end leftbar-tab-menu-->
+
+        <!-- Top Bar Start -->
+        @@include('./partials/topbar.html')
+        <!-- Top Bar End -->
+
+        <div class="page-wrapper">
+
+            <!-- Page Content-->
+            <div class="page-content-tab">
+
+                <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="float-end">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Metrica</a>
+                                        </li><!--end nav-item-->
+                                        <li class="breadcrumb-item"><a href="#">Hospital</a>
+                                        </li><!--end nav-item-->
+                                        <li class="breadcrumb-item active">Patients</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">All Patients</h4>
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div>
+                    <!-- end page title end breadcrumb -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead class="thead-light">
+                                            <tr>
+                                                <th>Patient Name</th>
+                                                <th>Age</th>
+                                                <th>ID</th>                                                    
+                                                <th>Address</th>
+                                                <th>Mobile No</th>
+                                                <th>Last Visit</th>
+                                                <th>Status</th>                                                
+                                                <th class="text-right">Action</th>
+                                            </tr><!--end tr-->
+                                            </thead>
+        
+                                            <tbody>
+                                            <tr>
+                                                <td><a href="hospital-patient-profile.html"><img src="assets/images/users/user-10.jpg" alt="" class="thumb-sm rounded-circle me-2">Donald Gardner</a></td>
+                                                <td>36</td>
+                                                <td>#1236</td>
+                                                <td>B28 University Street US</td>
+                                                <td>+123456789</td> 
+                                                <td>18/07/2019</td>
+                                                <td><span class="badge badge-soft-success">Approved</span></td> 
+                                                <td>                                                       
+                                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><a href="hospital-patient-profile.html"><img src="assets/images/users/user-9.jpg" alt="" class="thumb-sm rounded-circle me-2">Keith Jacobson</a></td>
+                                                <td>48</td>
+                                                <td>#1236</td>
+                                                <td>B28 University Street US</td>
+                                                <td>+123456789</td> 
+                                                <td>18/07/2019</td>   
+                                                <td><span class="badge badge-soft-success">Approved</span></td>                                             
+                                                <td>                                                       
+                                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><a href="hospital-patient-profile.html"><img src="assets/images/users/user-9.jpg" alt="" class="thumb-sm rounded-circle me-2">Greg Crosby</a></td>
+                                                <td>27</td>
+                                                <td>#1236</td>
+                                                <td>B28 University Street US</td>
+                                                <td>+123456789</td> 
+                                                <td>18/07/2019</td>    
+                                                <td><span class="badge badge-soft-success">Approved</span></td>                                           
+                                                <td>                                                       
+                                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><a href="hospital-patient-profile.html"><img src="assets/images/users/user-8.jpg" alt="" class="thumb-sm rounded-circle me-2">Fred Godina</a></td>
+                                                <td>22</td>
+                                                <td>#1236</td>
+                                                <td>B28 University Street US</td>
+                                                <td>+123456789</td> 
+                                                <td>18/07/2019</td>   
+                                                <td><span class="badge badge-soft-success">Approved</span></td>                                           
+                                                <td>                                                       
+                                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><a href="hospital-patient-profile.html"><img src="assets/images/users/user-7.jpg" alt="" class="thumb-sm rounded-circle me-2">Peggy Doe</a></td>
+                                                <td>51</td>
+                                                <td>#7851</td>
+                                                <td>B28 University Street US</td>
+                                                <td>+123456789</td> 
+                                                <td>20/07/2019</td> 
+                                                <td><span class="badge badge-soft-warning">Panding</span></td>                                               
+                                                <td>                                                       
+                                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><a href="hospital-patient-profile.html"><img src="assets/images/users/user-8.jpg" alt="" class="thumb-sm rounded-circle me-2">Jennifer Doss</a></td>
+                                                <td>18</td>
+                                                <td>#3654</td>
+                                                <td>B28 University Street US</td>
+                                                <td>+123456789</td> 
+                                                <td>19/07/2019</td>   
+                                                <td><span class="badge badge-soft-warning">Panding</span></td>                                             
+                                                <td>                                                       
+                                                    <a href="#"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->                              
+                                            </tbody>
+                                        </table>                    
+                                    </div>    
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn btn-outline-light btn-sm px-4 " onclick="location.href='hospital-add-patient.html'">+ Add New</button>
+                                        </div><!--end col-->      
+                                        <div class="col-auto">
+                                            <nav aria-label="...">
+                                                <ul class="pagination pagination-sm mb-0">
+                                                    <li class="page-item disabled">
+                                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                                    </li>
+                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">Next</a>
+                                                    </li>
+                                                </ul><!--end pagination-->
+                                            </nav><!--end nav-->       
+                                         </div> <!--end col-->                               
+                                    </div><!--end row-->                                              
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col-->                               
+                    </div><!--end row--> 
+
+                </div><!-- container -->
+
+                <!--Start Rightbar-->
+                @@include('./partials/right-sidebar.html')
+                 <!--end Rightbar-->
+                 
+                <!--Start Footer-->
+                @@include('./partials/footer.html')                
+                <!--end footer-->
+            </div>
+            <!-- end page content -->
+        </div>
+        <!-- end page-wrapper -->
+
+        <!-- Javascript  -->   
+        <!-- vendor js -->
+        @@include('./partials/vendorjs.html')
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+    <!--end body-->
+</html>

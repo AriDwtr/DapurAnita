@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    @@include("./partials/title-meta.html", {"title": "Metrica"})
+
+    <!-- <link href="assets/plugins/prettify/prettify.css" rel="stylesheet" type="text/css" /> -->
+
+    @@include('./partials/head-css.html')
+</head>
+
+
+
+<body id="body">
+    <!-- leftbar-tab-menu -->
+    @@include('./partials/left-sidebar-tab.html')
+    <!-- end leftbar-tab-menu-->
+
+    <!-- Top Bar Start -->
+    @@include('./partials/topbar.html')
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+
+        <!-- Page Content-->
+        <div class="page-content-tab">
+
+            <div class="container-fluid">
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="float-end">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Metrica</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Advanced UI</a></li>
+                                    <li class="breadcrumb-item active">Highlight</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Highlight</h4>
+                        </div>
+                        <!--end page-title-box-->
+                    </div>
+                    <!--end col-->
+                </div>
+                <!-- end page title end breadcrumb -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">HTML Highlight</h4>
+                                <p class="text-muted mb-0">It will automatically be pretty-printed.</p>
+                            </div><!--end card-header-->
+                            <div class="card-body">        
+                                <pre class="prettyprint lang-html escape">
+<div class="card-header">
+    <h4 class="card-title">Clipboard Examples of Textarea</h4>
+    <p class="text-muted mb-0">Textarea example of clipboard</p>
+</div>                                        
+                                </pre>                                    
+                            </div><!---end card-body-->
+                        </div><!--end card-->
+
+                                                 
+                    </div> <!-- end col -->
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Css Highlight</h4>
+                                <p class="text-muted mb-0">It will automatically be pretty-printed.</p>
+                            </div><!--end card-header-->
+                            <div class="card-body">        
+                                <pre class="prettyprint lang-css escape">
+.example {
+    font-family: Georgia, Times, serif;
+    color: #555;
+    text-align: center;
+}
+                                </pre>                               
+                            </div><!--end card-body-->
+                        </div><!--end card-->
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+
+            </div><!-- container -->
+
+             <!--Start Rightbar-->
+             @@include('./partials/right-sidebar.html')
+             <!--end Rightbar-->
+             
+            <!--Start Footer-->
+            @@include('./partials/footer.html')                
+            <!--end footer-->
+        </div>
+        <!-- end page content -->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- Javascript  -->
+    <!-- vendor js -->
+   @@include('./partials/vendorjs.html')
+    <script src="assets/js/run_prettify.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+
+
+    <script>
+       var entityMap = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;',
+            '/': '&#x2F;',
+            '`': '&#x60;',
+            '=': '&#x3D;'
+          };
+          function escapeHtml (string) {
+            return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+              return entityMap[s];
+            });
+          }
+          
+            for (e of document.getElementsByClassName('escape')) {
+                e.innerHTML = escapeHtml(e.innerHTML).trim();
+            }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+
+// Step bar
+
+ul.steppedprogress {
+  counter-reset: step;
+  display: flex;
+  margin: auto;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  li {
+    list-style-type: none;
+    color: $gray-700;
+    line-height: normal;
+    text-transform: uppercase;
+    flex: 1;
+    font-size: 12px;
+    position: relative;
+    padding: 0 2%;
+    font-weight: 500;
+    font-family: $font-secondary;
+    &:before {
+      content: counter(step);
+      counter-increment: step;
+      width: 24px;
+      height: 24px;
+      line-height: 20px;
+      display: block;
+      font-size: 12px;
+      color: $gray-700;
+      background: $gray-200;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      position: relative;
+      z-index: 1;
+      border: 2px solid $card-bg;
+      box-shadow: 0px 0px 0px 1.25px $gray-200;
+    }
+    &:after {
+      content: '';
+      width: 100%;
+      border: 0.5px dashed $border;
+      position: absolute;
+      left: -50%;
+      top: 12px;
+      z-index: -1
+    }
+    &.complete{
+      &:before {
+        background: $secondary;
+        color: $white;
+        border: 2px solid $card-bg;
+        box-shadow: 0px 0px 0px 1.25px $secondary;
+      }
+      &.continuous{
+        &:before {
+          background: $primary;
+          color: $white;
+          border: 2px solid $card-bg;
+          box-shadow: 0px 0px 0px 1.25px $primary;
+        }
+        span{
+          color: $primary;
+        }
+      }
+      &.finish{
+        &:before {
+          background: $danger;
+          color: $white;
+          border: 2px solid $card-bg;
+          box-shadow: 0px 0px 0px 1.25px $danger;
+          content: "\F12C";
+          font: normal normal normal 24px/1 "Material Design Icons";
+          font-size: 16px;
+          line-height: 20px;
+        }
+        span{
+          color: $danger;
+        }
+      }
+      &:after {
+        border-color: darken($border, 4%);
+      }
+    }
+  }
+  li:first-child:after {
+    content: none
+  }
+}
+
+@media (max-width: 480px) {
+  ul.steppedprogress {
+      display: block;
+      li {
+        flex: none;
+        clear: both;
+        text-align: left;
+        padding: 0;
+        margin-left: 2px;
+        min-height: 2.2em;
+        span {
+          white-space: nowrap
+      }
+      &:before {
+        float: none;
+        display: inline-block;
+        margin-right: 10px;
+        text-align: center;
+        margin-left: 0
+      }
+      &:after {
+        content: '';
+        width: 6px;
+        height: 100%;
+        position: absolute;
+        left: 12px;
+        top: -50%;
+        z-index: -1
+      }
+    }
+  }
+}
+
+// .litepicker{
+//   width: 100%;
+//   .container__months{
+//     width: 100%;
+//     box-shadow: none;
+//     .month-item{
+//       width: 100%;
+//       padding: 0;
+//       .month-item-header{        
+//         .button-previous-month{
+//           svg{
+//             display: none;
+//           }
+//           &::before{
+//             content: "\f104";
+//             font-family: 'Line Awesome Free';
+//             font-weight: 900;
+//             font-size: .875rem;
+//             color: $gray-700;
+//           }
+//         }
+//         .button-next-month{
+//           svg{
+//             display: none;
+//           }
+//           &::before{
+//             content: "\f105";
+//             font-family: 'Line Awesome Free';
+//             font-weight: 900;
+//             font-size: .875rem;
+//             color: $gray-700;
+//           }
+//         }
+//       }
+//     }
+//     .month-item-weekdays-row{
+//       font-size: 13px;
+//       font-weight: 500;
+//       color: $gray-700;
+//     }
+//   }
+//   .month-item-name,
+//   .month-item-year{
+//     font-size: 15px;
+//   }
+//   .container__days{
+//     div{
+//       width: 14.28571% !important;
+//       padding: 12px 0;
+//       &.day-item{
+//         position: relative;
+//         z-index: 1;
+//         font-size: 13px;        
+//         &::before{
+//           content: "";
+//           position: absolute;
+//           color: $gray-700;          
+//           background-image: none;
+//           font-weight: 500;
+//           display: flex;
+//           justify-content: center;
+//           width: 40px;
+//           height: 40px;
+//           text-align: center;
+//           border-radius: 50%;
+//           margin: 0 auto;
+//           bottom: 0;
+//           right: 0;
+//           left: 0;
+//           z-index: -1;
+//         }
+//         &.is-today:before{          
+//           background-color: $gray-200;
+//           border: 3px solid $card-bg;
+//           box-shadow: 0px 0px 0px 1.25px $gray-200;
+//         }
+//         &.is-today{
+//           color: $primary;
+//           font-weight:500;
+//         }
+//         &:hover{
+//           box-shadow: none;
+//           color: $primary;          
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+
+// kanban board
+.kanban-board{
+  flex: 1;
+  white-space: nowrap;
+  overflow-x: scroll;
+  display: flex;
+  .kanban-col {
+    user-select: none;
+    flex: 1 0 auto;
+    width: calc(100vw - 24px);
+    max-height: 100%;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    outline: none !important;
+    position: relative;
+    .kanban-main-card {
+      max-height: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-bottom: 12px;
+      border-radius: 4px;
+      padding: 20px;
+      background: $light;
+      .kanban-box-title{
+        position: relative;
+        display: block;
+        .kanban-main-dropdown{
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+      
+    }
+  }
+}
+
+@media (min-width: 576px){
+  .kanban-board .kanban-col {
+    max-width: 19.5rem;
+  }
+}

@@ -1,0 +1,100 @@
+// Dashboard
+
+
+.crypto-report-history{
+  .nav{  
+    background-color: $light; 
+    padding: 4px; 
+    border-radius: 4px;
+    &.nav-tabs{
+      border: none;
+    }
+    .nav-item{
+      .nav-link{
+        margin-right: 5px;
+        padding: 3px 8px;
+        font-size: 12px;
+        border-radius: 5px;
+        color: $gray-700;
+        font-weight: 500;
+        border-color: transparent;
+        &.active{
+          color: $primary;
+          background-color: $body-bg;
+          border-color: transparent;
+        }
+        &:focus,
+        &:hover{
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.crypto-calcy a .p-1{
+  display: none !important;
+}
+
+
+
+.coin-market-nav{
+  .nav-pills .nav-item.show .nav-link, 
+  .nav-pills .nav-link.active{
+    background: $card-bg;
+    box-shadow: 0 7px 14px 0 rgba($gray-500, 0.12);
+    border-radius: 0;
+  }
+}
+
+.transaction-history{
+  li{
+    border-bottom: 1px solid $border_2;
+    padding: 10px 0;
+  }
+  li:last-of-type{
+    border: none;
+    padding-bottom: 0;
+  }  
+}
+.positive{
+  color: $success !important;
+}
+.negative{
+  color: $danger !important;
+}
+.crypto-dash-activity{
+  height: 280px;
+}
+
+
+.ccc-widget {
+  >div{    
+    background: $card-bg !important;
+  }
+  .histoTitle{
+    display: none;
+  }  
+  div:first-child{
+    border:none !important;
+  }
+  div.histoRow:nth-of-type(2) {
+    font-weight: 500 !important;
+    color: $gray-700 !important;
+    font-size: 13px !important; 
+    background-color: $light;
+    .histoChange{
+      font-weight: 500;
+    }  
+  
+  }
+  div.histoRow{
+    border-bottom-color: $table-border-color !important;
+    font-size: 13px !important;
+    color: $table-color !important;
+    padding: $table-cell-padding-y $table-cell-padding-x;
+  }
+}
+
+
+

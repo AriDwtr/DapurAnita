@@ -1,0 +1,77 @@
+/* ==============
+  Form-Advanced
+===================*/
+
+
+.selectr-options-container,
+.selectr-selected{
+  border-color: $border_2 !important;
+  background-color: $input-bg;
+}
+.selectr-tag-input{
+  background-color: $input-bg;
+}
+.selectr-option.selected{
+  background-color: $gray-200;
+}
+.selectr-input{
+  border-color: $border !important;
+}
+
+.selectr-container.open .selectr-selected {
+  border-color: $border_2 $border_2 transparent;
+  border-radius: 3px 3px 0 0;
+}
+.selectr-tag{
+  background: $primary;
+  border-radius: 3px;
+}
+
+.selectr-tag-remove::after, 
+.selectr-tag-remove::before{
+  width: 1px;
+}
+
+//  Datepicker
+.datepicker.active{
+  display: inline-block;
+  border: 1px solid $border;
+  border-radius: 4px;
+}
+.datepicker-dropdown.datepicker-orient-top{
+  padding-bottom: 0;
+}
+.datepicker-header .datepicker-controls .button{
+  font-weight: 500;
+}
+.datepicker-controls .button{
+  font-size: 15px;
+  border: 1px solid $border;
+  background-color: $body-bg;
+  color: $gray-700;
+}
+.datepicker-view .dow{
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.datepicker-picker {
+  background-color: $body-bg;
+  span{
+    border-radius: 25px;
+  }
+}
+.datepicker-cell.focused:not(.selected),
+.datepicker-cell:not(.disabled):hover{
+  background-color: $card-bg;
+}
+
+// Mask
+.example__complete {
+  display: none;
+  margin-left: 5px;
+}
+
+.example__complete::after {
+  content: '✔';
+}

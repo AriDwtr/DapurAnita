@@ -1,0 +1,73 @@
+/*
+Template Name: Metrica - Admin & Dashboard Template
+Author: Mannatthemes
+Version: 3.1.0
+File: App Css
+*/
+
+//Core files
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "config/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+
+// Structure
+@import "structure/topbar";
+@import "structure/footer";
+@import "structure/leftbar-tab";
+@import "structure/leftbar";
+@import "structure/horizontal-nav";
+
+
+// Components
+@import "components/reboot";
+@import "components/waves";
+@import "components/card";
+@import "components/badge";
+@import "components/buttons";
+@import "components/dropdown";
+@import "components/tables";
+@import "components/progress";
+@import "components/alert";
+@import "components/forms";
+@import "components/modals";
+@import "components/switch";
+@import "components/form-advanced";
+@import "components/form-validation";
+@import "components/form-wizard";
+@import "components/form-editor";
+@import "components/nav";
+@import "components/spinners";
+
+
+
+
+
+// Plugins
+@import "plugins/custom-scrollbar";
+@import "plugins/charts";
+@import "plugins/ui-slider";
+@import "plugins/sweet-alert";
+@import "plugins/dropzone";
+@import "plugins/maps";
+@import "plugins/calendar";
+@import "plugins/img-crop";
+
+
+// Pages
+@import "pages/general";
+@import "pages/background-color";
+@import "pages/avatar";
+@import "pages/files";
+@import "pages/ribbons";
+@import "pages/pricing";
+@import "pages/timeline";
+@import "pages/profile";
+@import "pages/chat";
+@import "pages/invoice";
+@import "pages/print";
+@import "pages/email";
+@import "pages/crypto";
+@import "pages/projects";
+@import "pages/account-pages";

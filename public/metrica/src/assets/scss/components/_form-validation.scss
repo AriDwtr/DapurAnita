@@ -1,0 +1,23 @@
+//
+// Form Validation
+// 
+
+
+#form-validation-2{
+  small{
+    display: none;
+    color: $danger;
+    &.error {
+      display: block;
+    }
+  }  
+}
+
+.form-control{
+  &.error {
+    border-color: $danger;
+  }
+  &.success{
+    border-color: $success;
+  }
+}

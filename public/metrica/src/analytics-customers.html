@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    
+    <head>
+        @@include("./partials/title-meta.html", {"title": "Metrica"})
+        <link href="assets/libs/tabulator-tables/css/tabulator_bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        @@include('./partials/head-css.html')
+    </head>
+
+    <body id="body">
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/left-sidebar-tab.html')
+        <!-- end leftbar-tab-menu-->
+
+        <!-- Top Bar Start -->
+        @@include('./partials/topbar.html')
+        <!-- Top Bar End -->
+
+        <div class="page-wrapper">
+
+            <!-- Page Content-->
+            <div class="page-content-tab">
+
+                <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="float-end">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Metrica</a>
+                                        </li><!--end nav-item-->
+                                        <li class="breadcrumb-item"><a href="#">Analytics</a>
+                                        </li><!--end nav-item-->
+                                        <li class="breadcrumb-item active">Customers</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Customers</h4>
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div>
+                    <!-- end page title end breadcrumb -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row align-items-center">
+                                        <div class="col">                      
+                                            <h4 class="card-title">Customers Growth</h4>                      
+                                        </div><!--end col-->
+                                    </div>  <!--end row-->                                  
+                                </div><!--end card-header-->
+                                <div class="card-body">
+                                    <div class="chart-demo">
+                                        <div id="apex_line1" class="apex-charts"></div>
+                                    </div>                                        
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card"> 
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col align-self-center">
+                                            <h6 class="font-15 m-0 mb-1">Returning Customers</h6>
+                                            <p class="text-muted mb-0">Last Month : 150 <i class="mdi mdi-menu-up text-success"></i></p>
+                                        </div><!--end col-->  
+                                        <div class="col-auto align-self-center">                                              
+                                            <div class="">
+                                                <div id="bar-1" class="apex-charts mb-n4"></div>
+                                            </div>
+                                        </div><!--end col-->                                      
+                                    </div><!--end row-->                                                                                                                                  
+                                </div><!--end card-body-->                                
+                            </div><!--end card-->  
+                        </div><!--end col--> 
+                        
+                        <div class="col-md-4">
+                            <div class="card"> 
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col align-self-center">
+                                            <h6 class="font-15 m-0 mb-1">New Customers</h6>
+                                            <p class="text-muted mb-0">Last Month : 10 <i class="mdi mdi-menu-down text-danger"></i></p>
+                                        </div><!--end col-->  
+                                        <div class="col-auto align-self-center">                                              
+                                            <div class="">
+                                                <div id="line-1" class="apex-charts"></div>
+                                            </div>
+                                        </div><!--end col-->                                      
+                                    </div><!--end row-->                                                                                                                                  
+                                </div><!--end card-body-->                                
+                            </div><!--end card-->  
+                        </div><!--end col--> 
+                        <div class="col-md-4">
+                            <div class="card"> 
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col align-self-center">
+                                            <h6 class="font-15 m-0 mb-1">Bounce Rate</h6>
+                                            <p class="text-muted mb-0">Last Month : 50% <i class="mdi mdi-menu-up text-success"></i></p>
+                                        </div><!--end col-->  
+                                        <div class="col-auto align-self-center">                                              
+                                            <div class="">
+                                                <div id="radialBar-1" class="apex-charts my-n2"></div>
+                                            </div>
+                                        </div><!--end col-->                                      
+                                    </div><!--end row-->                                                                                                                                  
+                                </div><!--end card-body-->                                
+                            </div><!--end card-->  
+                        </div><!--end col-->
+                    </div><!--end row-->    
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Customers Details </h4>
+                                </div><!--end card-header-->
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <div id="datatable-1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+                </div><!-- container -->
+
+                <!--Start Rightbar-->
+                @@include('./partials/right-sidebar.html')
+                 <!--end Rightbar-->
+                 
+                <!--Start Footer-->
+                @@include('./partials/footer.html')                
+                <!--end footer-->
+            </div>
+            <!-- end page content -->
+        </div>
+        <!-- end page-wrapper -->
+
+        <!-- Javascript  -->   
+        <!-- vendor js -->
+        @@include('./partials/vendorjs.html')
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+        <script src="assets/libs/tabulator-tables/js/tabulator.min.js"></script>
+        <script src="assets/js/pages/analytics-customers.init.js"></script>
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+    <!--end body-->
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        @@include("./partials/title-meta.html", {"title": "Metrica"})
+
+        @@include('./partials/head-css.html')
+    </head>
+
+    <body id="body">
+        <!-- leftbar-tab-menu -->
+        @@include('./partials/left-sidebar-tab.html')
+        <!-- end leftbar-tab-menu-->
+
+        <!-- Top Bar Start -->
+        @@include('./partials/topbar.html')
+        <!-- Top Bar End -->
+
+
+        <div class="page-wrapper">
+
+            <!-- Page Content-->
+            <div class="page-content-tab">
+
+                <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="float-end">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Metrica</a>
+                                        </li><!--end nav-item-->
+                                        <li class="breadcrumb-item"><a href="#">Hospital</a>
+                                        </li><!--end nav-item-->
+                                        <li class="breadcrumb-item active">Shedule</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Shedule</h4>
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div>
+                    <!-- end page title end breadcrumb -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <button type="button" class="btn btn-de-primary btn-sm mt-0 mb-3" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-example-modal-lg">Add New Shedule</button>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th>Doctor Name</th>
+                                                    <th>Department</th>  
+                                                    <th>Working days</th>
+                                                    <th>Time</th>
+                                                    <th>Extra Info</th>
+                                                    <th>Status</th>                                                
+                                                    <th class="text-right">Action</th>
+                                                </tr><!--end tr-->
+                                            </thead>
+        
+                                            <tbody>
+                                            <tr>
+                                                <td><img src="assets/images/users/user-1.jpg" alt="" class="thumb-sm rounded-circle me-2">Dr.Thomas Fant</td>                                                
+                                                <td>Orthopedic</td>                                                
+                                                <td>Monday,Tuesday</td>
+                                                <td>11:00 am to 03:00pm </td>
+                                                <td>-</td> 
+                                                <td><span class="badge badge-soft-success">Active</span></td>                                               
+                                                <td>                                                       
+                                                    <a href="#"><i class="las la-pen text-secondary font-18"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-18"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><img src="assets/images/users/user-4.jpg" alt="" class="thumb-sm rounded-circle me-2">Dr.Helen White</td>
+                                                <td>Neurology</td>
+                                                <td>Friday, Saturday</td>
+                                                <td>03:30 pm to 10:00 pm</td>
+                                                <td>-</td>
+                                                <td><span class="badge badge-soft-danger">Inactive</span></td>                                               
+                                                <td>                                                       
+                                                    <a href="#"><i class="las la-pen text-secondary font-18"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-18"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><img src="assets/images/users/user-6.jpg" alt="" class="thumb-sm rounded-circle me-2">Dr.Aretha Garland</td>
+                                                <td>Neurology</td>
+                                                <td>Monday</td>
+                                                <td>09:30 am to 12:30 pm</td>
+                                                <td>Going to Family Function</td>
+                                                <td><span class="badge badge-soft-success">Active</span></td>                                               
+                                                <td>                                                       
+                                                    <a href="#"><i class="las la-pen text-secondary font-18"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-18"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->                                                                         
+                                            </tbody>
+                                        </table>                    
+                                    </div>                                         
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col-->                               
+                    </div><!--end row-->
+
+                </div><!-- container -->
+
+                <!--Start Rightbar-->
+                @@include('./partials/right-sidebar.html')
+                 <!--end Rightbar-->
+                 
+                <!--Start Footer-->
+                @@include('./partials/footer.html')                
+                <!--end footer-->
+            </div>
+            <!-- end page content -->
+        </div>
+        <!-- end page-wrapper -->
+
+        <!--  Modal content for the above example -->
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title mt-0" id="myLargeModalLabel">Add New Shedule</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="DoctorName_select" class="me-2 form-label">Doctor Name</label>
+                                        <select class="form-select" id="DoctorName_select">
+                                            <option selected="">-- Select --</option>
+                                            <option value="1">Dr.Thomas Fant</option>
+                                            <option value="2">Dr.Justin Williams</option>
+                                            <option value="3">Dr.Aretha Garland</option>
+                                            <option value="4">Dr.Lea Sanchez</option>
+                                            <option value="5">Dr.Helen White</option>
+                                            <option value="6">Dr.William Gonzalez</option>
+                                        </select>
+                                    </div>                                    
+                                </div> 
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="Department_select" class="me-2 form-label">Department</label>
+                                        <select class="form-select" id="Department_select">
+                                            <option selected="">-- Select --</option>
+                                            <option value="1">Orthopedic</option>
+                                            <option value="2">Fizioterapie</option>
+                                            <option value="3">Cardiology</option>
+                                            <option value="4">Gynaecology</option>
+                                            <option value="5">Neurology</option>
+                                            <option value="6">Psychology</option>
+                                        </select>
+                                    </div>
+                                </div>                                    
+                            </div>
+                            <div class="row">                
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="form-label my-2" for="AppoDate">Days</label>
+                                        <input type="text" class="form-control" id="AppoDate" required="">
+                                    </div>
+                                </div>      
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label class="form-label my-2" for="AppoTime">Time</label>
+                                        <input type="text" class="form-control" id="AppoTime" required="">
+                                    </div>
+                                </div>  
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label my-2" for="message">Extra Info</label>
+                                        <textarea class="form-control" rows="3" id="message"></textarea>
+                                    </div>                                    
+                                </div>
+                            </div> 
+                            <button type="button" class="btn btn-sm btn-de-primary">Save</button>  
+                            <button type="button" class="btn btn-sm btn-de-danger">Delete</button>             
+                        </form>  
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <!-- Javascript  -->   
+        <!-- vendor js -->
+        @@include('./partials/vendorjs.html')
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+    <!--end body-->
+</html>

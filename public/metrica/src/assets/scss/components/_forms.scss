@@ -1,0 +1,23 @@
+.uppy-DragDrop-container{
+    background-color: lighten($card-bg, 2%);
+}
+.uppy-Dashboard-inner{
+    background-color: $card-bg;
+    border: 1px solid $border_2;
+}
+[data-uppy-drag-drop-supported=true] .uppy-Dashboard-AddFiles{
+    border: 1px dashed $border_2;
+}
+
+.uppy-Dashboard-AddFiles-title{
+    color: $dark;
+}
+.uppy-DragDrop-container:focus{
+    box-shadow: none;
+}
+.uppy-DragDrop--isDragDropSupported{
+    border: 2px dashed $gray-300;
+}
+.uppy-DragDrop-label{
+    color: $body-color;
+}

@@ -1,0 +1,409 @@
+/*
+Template Name: Metrica - Admin & Dashboard Template
+Author: Mannatthemes
+Email: mannat.themes@gmail.com
+File: Leftbar-tab
+*/
+
+
+//
+// Left Sidenav
+// 
+
+
+.leftbar-tab-menu {
+    min-width: $sidebar-width;
+    z-index: 1001;
+    .main-icon-menu{
+        width: $sidebar-collapse-width !important;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px 0;
+        background-color: $sidebar-collapse-bg;       
+        height: 100% !important;
+        z-index: 1001;
+        position: fixed;
+        top: 0;
+        .logo-metrica{
+           .logo-sm{
+            height: 34px;
+           }
+        }
+        .main-icon-menu-body{
+            overflow: hidden;
+            width: 100%;
+            max-height: 100%;
+            .menu-icon{
+                color: $sidebar-collapse-icon-color;
+                font-size: 22px;
+            } 
+            .nav{
+                flex: 1;
+                flex-direction: column;
+                align-items: center;
+                margin-top: $header-height; 
+                width: $sidebar-collapse-width;
+              //   height: calc(100vh - 90px - 90px); 
+                .nav-item{
+                    display: flex;
+                    justify-content: center;
+                    margin: 14px 0;
+                }    
+                &.nav-tabs {
+                    border-bottom: none;
+                    .nav-link{
+                        border: none;
+                        position: relative;
+                        padding: 0;
+                        color: $sidebar-light-bg;
+                        width: 36px;
+                        height: 36px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: tint-color($sidebar-collapse-bg, 3%);
+                        border-radius: 5px;
+                        font-weight: 500;
+                        &:focus,
+                        &.active {
+                            background-color: tint-color($sidebar-collapse-bg, 3%);
+                            border-color: transparent;
+                            color: tint-color($sidebar-light-bg, 8%);
+                        }
+                        &:hover{
+                            color: tint-color($sidebar-light-bg, 8%);
+                        }
+                        &:active,
+                        &.active{
+                            color: $primary;
+                            .menu-icon{
+                                color: $sidebar-collapse-icon-active-color;
+                            }
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                left: 40px;
+                                top: 10px;
+                                border-right: 10px solid $sidebar-inner-bg;
+                                border-top: 10px solid transparent;
+                                border-bottom: 10px solid transparent;
+                            }
+                        }  
+                    }
+                }
+            }
+        }
+        .pro-metrica-end {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $sidebar-collapse-bg;    
+            margin-top: auto;      
+        }
+    }
+    @media (min-width: 992px) {
+        .main-icon-menu{
+            display: flex;
+        }
+    }
+    @media (max-width: 991.98px){
+      .main-icon-menu{
+          display: flex;
+      }
+    }
+
+    .main-menu-inner {
+        width: $sidebar-inner-width;
+        height: 100%;
+        background-color: $sidebar-inner-bg;
+        border-right: 1px solid $border;
+        position: fixed;
+        top: 0;
+        left: $sidebar-collapse-width;
+        z-index: 1001;
+        border-right: 1px solid $border;
+        .topbar-left {
+            background-color: $sidebar-inner-bg;
+            padding-left: 16px;
+            .logo {
+                line-height: $header-height;
+                .logo-sm {
+                    height: 24px;                
+                }
+                .logo-lg {
+                    height: 15px;
+                    margin-left: 2px;
+                    display: $brand-dark;
+                }
+                .logo-light{
+                    display: $brand-light;
+                }
+            }
+        }
+        .menu-body{
+            padding: 16px;
+            height: calc(100vh - 60px) !important; 
+            box-shadow: $sidebar-shadow;       
+            .nav-item {
+                position: relative;
+                display: block;
+                .nav-link {
+                    position: relative;
+                    color: $sidebar-menu-item-color;
+                    font-size: 13px;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    height: 38px; 
+                    border-radius: 3px;  
+                    &.active i,
+                    &.active {
+                        color: $sidebar-menu-item-active-color; 
+                    }                          
+                } 
+            }        
+            .main-icon-menu-pane {
+                margin-bottom: 20px;
+                display: none; 
+                &.active {
+                    display: block; 
+                }
+            }   
+        }
+        .navbar-vertical {
+            .navbar-nav {
+                padding-left: 1rem;
+                .nav-link[data-bs-toggle=collapse]:after {
+                    display: block;
+                    content: "\f105";
+                    font-family: 'Line Awesome Free';
+                    font-weight: 900;
+                    margin-left: auto;
+                    transition: transform .2s;
+                }
+                .nav-link[data-bs-toggle=collapse][aria-expanded=true]:after {
+                    transform: rotate(90deg);
+                }
+                .nav-item{
+                    .nav{
+                        .nav-item{
+                            .nav-link{
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    left: 4px;
+                                    width: 4px;
+                                    height: 4px;
+                                    border: 1px solid $gray-500;
+                                    border-radius: 50%;
+                                    background: rgba($gray-700, .2);
+                                }
+                                &.active:before{
+                                    content: "";
+                                    border: none;
+                                    background: $primary;
+                                }
+                            }
+                        }
+                    }                
+                }
+            }
+        }   
+    }
+}
+  
+.navbar-custom{
+    .responsive-logo{
+        display: none;
+    }
+}
+.page-wrapper {
+    flex: 1;
+    display: flex;
+    .page-content-tab {
+        width: calc(100% - #{$sidebar-width});
+        margin-left: auto;
+        position: relative;
+        min-height: calc(100vh - #{$header-height});
+        padding: 0 8px 52px 8px;
+        margin-top: $header-height;
+    }    
+}
+
+
+// Enlarge menu
+.enlarge-menu {
+    .leftbar-tab-menu{
+        min-width: $sidebar-collapse-width;
+        .main-menu-inner{
+            display: none;
+            transition: opacity 0.3s linear, left 0.3s ease-out;
+        }
+    }
+    .topbar {
+        .navbar-custom{
+            margin-left: $sidebar-collapse-width;
+        }        
+        .topbar-left{
+            margin-left: 0;
+            width: $sidebar-width;
+        }
+    }
+    &.enlarge-menu-all {
+        .leftbar-tab-menu{
+            display: none;
+        }
+        .topbar {
+            .topbar-left{
+                margin-left: 0;
+                width: $sidebar-width;
+            }
+            .navbar-custom{
+                margin-left: 0;
+            } 
+        }
+    }
+    .page-content-tab {
+      width: calc(100% - #{$sidebar-collapse-width});       
+    }
+}
+
+@media (max-width: 1199.98px){    
+    .page-wrapper {
+        .page-content-tab {
+            width: calc(100% - #{$sidebar-collapse-width});  
+        }    
+    }
+}
+
+@media (max-width: 1023.98px){
+    .leftbar-tab-menu {
+        position: fixed;
+        top: $header-height;
+        overflow-y: auto;
+        z-index: 5;
+        bottom: 0;
+    }
+    .navbar-custom {
+        margin-left: $sidebar-collapse-width;
+        .responsive-logo{
+          display: flex;
+          padding-left: 10px;
+        }
+    }
+    .page-content-tab {
+        min-height: 100vh;
+        width: 100%;
+    }
+    .enlarge-menu {
+        .topbar {
+            .topbar-left{
+                margin-left: 0;
+                width: 60px !important;
+            }
+        }
+        .page-content-tab {
+          width: 100%;       
+      }
+    }
+    .enlarge-menu-all{
+        .topbar {            
+            .navbar-custom{
+                margin-left: 0;
+            } 
+        }
+        .page-content-tab {
+            width: 100%;       
+        }
+    }
+}
+
+@media (min-width: 768px){
+     .navbar-collapse {
+        display: block !important;
+    }
+    .navbar-vertical {
+        .navbar-nav {
+            .nav {
+                .nav-link {
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }  
+}
+
+@media (max-width: 767.98px){
+    .navbar-collapse {
+       display: block !important;
+   }
+   .navbar-vertical {
+       .navbar-nav {
+           .nav {
+               .nav-link {
+                   padding-left: 1rem;
+               }
+           }
+       }
+   }  
+}
+
+@media (min-width: 680px) {
+    .page-wrapper {
+        display: flex;
+    }
+  }
+
+
+body{
+    &.dark-sidebar{
+        .leftbar-tab-menu {
+            .main-menu-inner{
+                background-color:$sidebar-inner-dark-bg;
+                .topbar-left{
+                    background-color:$sidebar-inner-dark-bg;
+                    .logo {
+                        .logo-lg {
+                            display: $brand-light;
+                        }
+                        .logo-light{
+                            display: $brand-dark;
+                        }
+                    }
+                }
+                .menu-body {
+                    .nav-item {
+                        .nav-link{
+                            color: $sidebar-menu-item-dark-color;
+                        }
+                    }
+                }
+                .menu-title{
+                    color: lighten($sidebar-menu-item-dark-color, 20%);
+                }
+            }
+            .main-icon-menu {
+                .main-icon-menu-body {
+                    .nav.nav-tabs {
+                        .nav-link{
+                            &.active:before{
+                                content: '';
+                                border-right: 10px solid $sidebar-inner-dark-bg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+  
+[dir=rtl] .leftbar-tab-menu .main-menu-inner .navbar-vertical .navbar-nav .nav-link[data-bs-toggle=collapse]:after{
+    transform: rotate(-180deg);
+}
+
+[dir=rtl] .leftbar-tab-menu .main-menu-inner .navbar-vertical .navbar-nav .nav-link[data-bs-toggle=collapse][aria-expanded=true]:after{
+    transform: rotate(-90deg);
+}

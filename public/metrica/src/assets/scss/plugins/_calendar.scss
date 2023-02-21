@@ -1,0 +1,160 @@
+//
+// Calendar
+// 
+
+.fc-event {
+  border-radius: 2px;
+  border: none;
+  cursor: move;
+  font-size: 13px;
+  margin: 5px;
+  padding: 7px 5px;
+  text-align: center;
+  background-color: rgba($primary, 0.18);
+  color: $primary;
+}
+
+.fc {
+  .fc-header-toolbar{
+    &.fc-toolbar {
+      .fc-toolbar-chunk{
+        h2{
+          font-size: 16px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .fc-toolbar{
+    &.fc-header-toolbar{
+      margin-bottom: $card-spacer-y;
+    }
+  }
+
+  .fc-col-header-cell-cushion{
+    padding: 10px 0;
+  }
+  .fc-button{
+    font-size: $font-size-base;
+  }
+  .fc-button-primary{
+    background: transparent;
+    border: 1px solid $border;
+    color: $gray-600;
+    text-transform: capitalize;
+    text-shadow: none;
+    box-shadow: none;
+    &:hover{
+      background: $primary;
+      color: $white;
+      border-color: $card-bg;
+    }
+    &.active,
+    &:focus,
+    &:active{
+      text-shadow: none;
+      box-shadow: none;
+    }
+    &:disabled {
+      background: rgba($primary, 0.1);
+      color: $primary;
+      border-color: $card-bg;
+      opacity: 1;
+    }
+    &:not(:disabled):active, 
+    &:not(:disabled).fc-button-active{
+      background: $primary;
+      color: $white;
+      border-color: $card-bg;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.fc-license-message{
+  display: none;
+}
+
+.fc-theme-standard {
+  .fc-scrollgrid,
+  td, 
+  th{
+    border: 1px solid $border;
+  }
+}
+
+.fc-day-other{
+  background-image: linear-gradient(-45deg, $card-bg 25%, transparent 25%, transparent 50%, $card-bg 50%, $gray-200 75%, transparent 75%, transparent);
+  background-size: 10px 10px;
+}
+
+
+.fc-h-event {
+  .fc-event-main{
+    color: $gray-500;
+  }
+}
+
+
+
+// Lightpick
+
+.litepicker{
+  box-shadow: none;
+  font-family: $font-secondary;
+  background-color: $card-bg;
+  border: 1px solid $border;
+  z-index: 99;
+  width: 100%;
+  font-size: $font-size-base;
+  .container__main{
+    width: 100%;
+    .month-item{
+      width: 100%;
+    }
+  }
+  .container__months{
+    width: 100%;
+    box-shadow: none;
+    background-color: $card-bg;
+    .month-item-weekdays-row {
+      > div{
+        font-size: 12px;
+        font-weight: 500;
+        color: $body-color;
+      }
+    }
+    .month-item-header {
+      div{
+        > .month-item-name,
+        > .month-item-year{
+          color: $body-color;
+        }
+      }
+    }
+  }
+ .container__days {
+  > div,
+  > a{
+    width: calc(100% / 7);
+    padding: 12px 0;
+    }
+    .day-item{
+      font-size: 12px;
+      color: $gray-700;
+      transition: none;
+      &.is-today{
+        background-color: rgba($primary, 0.08);
+        color: $primary;
+      }
+      &:hover{
+        box-shadow: none;
+        background-color: rgba($primary, 0.08);
+        color: $primary;
+      }
+    }
+  }
+} 
+
